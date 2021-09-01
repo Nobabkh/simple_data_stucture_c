@@ -9,7 +9,7 @@ int main()
     printf("Enter the length of the array\n");
     scanf("%d", &n);
     int arr[n];
-    int *pion = &arr[n];
+    int *pion = &arr[0];
     printf("Enter the Elements of the array\n");
     for(i = 0; i < n; i++)
     {
@@ -41,8 +41,9 @@ int main()
     }
     res1 = k - tem;
     res2 = w * res1;
-    result = pion + res2;
-    printf("Memory address of %d is %d\n", k, result);
+    printf("%d", res2);
+    result = (int)pion + res2;
+    printf("Memory address of %d is %d \n", k, result);
     return 0;
 
 }
