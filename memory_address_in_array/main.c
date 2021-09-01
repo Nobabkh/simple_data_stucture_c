@@ -2,12 +2,14 @@
 
 int main()
 {
-    int arr[100], n, i, k, w, result, tem = 100, res1, res2, bol =0;
-    int *pion = &arr[100];
+    int n, i, k, w, result, tem = 100, res1, res2, bol =0;
+
     w = sizeof(int);
     printf("E.G just for int type array\n");
     printf("Enter the length of the array\n");
     scanf("%d", &n);
+    int arr[n];
+    int *pion = &arr[n];
     printf("Enter the Elements of the array\n");
     for(i = 0; i < n; i++)
     {
