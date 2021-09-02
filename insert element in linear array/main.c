@@ -1,11 +1,11 @@
 #include <stdio.h>
 int main()
 {
-   int array[100], position, c, n, tem;
+   int position, c, n, tem;
 
    printf("Enter number of elements in array\n");
    scanf("%d", &n);
-
+   int  array[n];
    printf("Enter %d elements\n", n);
 
    for (c = 0; c < n; c++)
