@@ -9,7 +9,9 @@ int main()
    printf("Enter %d elements\n", n);
 
    for (c = 0; c < n; c++)
+   {
       scanf("%d", &array[c]);
+   }
 
    printf("Enter the location where you wish to insert element\n");
    scanf("%d", &position);
@@ -19,7 +21,9 @@ int main()
 
 
    if (position >= n+1)
+   {
       printf("insertation not possible.\n");
+   }
    else
    {
       for (c = n; c >= position; c--)
