@@ -10,13 +10,13 @@ int main()
     int arr[n];
     for(i = 0; i < n; i++)
     {
-        printf("Enter number for position %d", i+1);
+        printf("Enter number for position %d\t", i+1);
         scanf("%d", &arr[i]);
     }
 
     for(i = 0; i < n; i++)
     {
-        for(j = 0; j < 4; j++)
+        for(j = 0; j < n; j++)
         {
             if(arr[j] > arr[j+1])
             {
@@ -26,7 +26,7 @@ int main()
             }
         }
     }
-    for(i = 0; i < 5; i++)
+    for(i = 0; i < n; i++)
     {
         printf("%d\t", arr[i]);
     }

@@ -52,7 +52,7 @@ void binary(int array[], int n, int x)
 
 int main() {
   int data[] = {12, 3, 4, 6, 8, 14, 44, 17, 65, 9, 41};
-  int get = 12;
+  int get = 3;
   int size = sizeof(data) / sizeof(data[0]);
   selectionSort(data, size);
   printf("Sorting array in Acsending Order\n");
