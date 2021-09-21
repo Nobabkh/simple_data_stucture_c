@@ -3,25 +3,25 @@
 
 int CAPACITY;
 int top = -1;
-int *stacke;
-int rem;
+char *stacke;
+char rem;
 
-void push(int x)
+void push(char x)
 {
     if(top < CAPACITY - 1){
         top = top + 1;
         *(stacke+top)= x;
-        printf("Succesfully added item: %d\n", x);
+        printf("Succesfully added item: %c\n", x);
         printf("space left %d\n", CAPACITY -top -1);
     }else{
         printf("Exception! No spaces\n");
     }
 }
 
-int pop()
+char pop()
 {
     if(top >= -1){
-        int val = *(stacke+top);
+        char val = *(stacke+top);
         top = top - 1;
         return val;
     }
@@ -29,7 +29,7 @@ int pop()
     return -1;
 }
 
-int peek()
+char peek()
 {
     if(top >= 0){
         return *(stacke+top);
@@ -39,12 +39,13 @@ int peek()
 }
 int main()
 {
-    int status = 0, pope;
+    int status = 0;
+    char pope;
     printf("Implementing my stack in C.\n");
     printf("Enter stack size\t");
     scanf("%d", &CAPACITY);
     printf("stack creation successfull stack size %d\n", CAPACITY);
-    int poin[CAPACITY];
+    char poin[CAPACITY];
     stacke = poin;
     printf("Please select stack operation\n");
     while(status != stack_quit)
@@ -58,15 +59,15 @@ int main()
         if(status == 1)
         {
             printf("Enter number to push in the stack\t");
-            scanf("%d", &pope);
+            gets(pope);
             push(pope);
         }
         else if(status == 2)
         {
             rem = pop();
-            if(rem != -1)
+            if(rem != '-1')
             {
-                printf(" poped value is %d\n", pop());
+                printf(" poped value is %c\n", pop());
             }
             else
             {
@@ -75,7 +76,7 @@ int main()
         }
         else if(status == 3)
         {
-            printf(" peek is %d\n", peek());
+            printf(" peek is %c\n", peek());
         }
 
     }

@@ -15,7 +15,7 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-    arr[i] = tem;
+    tem = arr[0];
     for(i = 0; i < n; i++)
     {
         if(arr[i] < tem)
